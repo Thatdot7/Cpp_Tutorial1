@@ -63,6 +63,18 @@ int main() {
 	GameBoard game = GameBoard(player1, player2);
 	while(1) {
 		game.display();
+		char winner = game.check_game();
+		if(winner == 'X') {
+			std::cout << "============================" << std::endl;
+			std::cout << "The winner is " << player1.getName() << std::endl;
+			std::cin.get();
+			return 0;
+		} else if(winner == 'O') {
+			std::cout << "============================" << std::endl;
+			std::cout << "The winner is " << player2.getName() << std::endl;
+			std::cin.get();
+			return 0;
+		}
 		game.next_turn();
 	}
 }

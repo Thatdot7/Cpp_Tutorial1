@@ -64,14 +64,14 @@ void GameBoard::next_turn() {
 
 char GameBoard::check_game() {
 
-	if(board_state[0] == (board_state[1] == board_state[2])) { return board_state[0];
-	} else if(board_state[3] == (board_state[4] == board_state[5])){ return board_state[3];
-	} else if(board_state[6] == (board_state[7] == board_state[8])){ return board_state[6];
-	} else if(board_state[0] == (board_state[3] == board_state[6])){ return board_state[0];
-	} else if(board_state[1] == (board_state[4] == board_state[7])){ return board_state[1];
-	} else if(board_state[2] == (board_state[5] == board_state[8])){ return board_state[2];
-	} else if(board_state[0] == (board_state[4] == board_state[8])){ return board_state[0];
-	} else if(board_state[2] == (board_state[4] == board_state[6])){ return board_state[2];
+	if(board_state[0] == board_state[1] && board_state[1] == board_state[2]) { return board_state[0];
+	} else if((board_state[3] == board_state[4]) && (board_state[4] == board_state[5])){ return board_state[3];
+	} else if((board_state[6] == board_state[7]) && (board_state[7] == board_state[8])){ return board_state[6];
+	} else if((board_state[0] == board_state[3]) && (board_state[3] == board_state[6])){ return board_state[0];
+	} else if((board_state[1] == board_state[4]) && (board_state[4] == board_state[7])){ return board_state[1];
+	} else if((board_state[2] == board_state[5]) && (board_state[5] == board_state[8])){ return board_state[2];
+	} else if((board_state[0] == board_state[4]) && (board_state[4] == board_state[8])){ return board_state[0];
+	} else if((board_state[2] == board_state[4]) && (board_state[4] == board_state[6])){ return board_state[2];
 	} else { return NULL; }
 
 }
