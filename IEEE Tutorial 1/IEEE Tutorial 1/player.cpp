@@ -27,6 +27,7 @@ int Player::getPlayerMove() {
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		std::cout <<"Invalid number" << std::endl << "Enter the number in which to take: " << std::endl;
+		std::cin >> option;
 	}
 
 	return option-1;
